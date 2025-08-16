@@ -14,7 +14,7 @@ const EMPRESA_DATA = {
     cnpj: "00000000000001",
     telefone: "62998130462",
     email: "pedrovitorgouveia123@gmail.com",
-    website: null
+    website: "https://bigodetime.com.br",
 };
 
 type AdminSeedData = {
