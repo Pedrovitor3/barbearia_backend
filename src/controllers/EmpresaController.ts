@@ -118,7 +118,7 @@ export class EmpresaController {
     if (!empresa) {
       return null;
     }
-
+console.log("Empresa encontrada:", empresa);
     // Verificar o tipo de usuário
     const isAdmin = await adminRepo.findOneBy({ pessoaId: usuario.pessoaId });
     const funcionarioUsuario = await funcionarioRepo.findOneBy({
