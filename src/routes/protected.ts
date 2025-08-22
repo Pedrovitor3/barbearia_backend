@@ -5,6 +5,7 @@ import { Usuario } from "@/entity/Usuario";
 import { UsuarioController } from "@/controllers/UsuarioController";
 import { EmpresaController } from "@/controllers/EmpresaController";
 import { FuncionarioController } from "@/controllers/FuncionarioController";
+import { AgendamentoController } from "@/controllers/AgendamentoController";
 
 interface AuthenticatedUser {
   usuarioId: number;

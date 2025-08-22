@@ -70,14 +70,15 @@ export default async function funcionarioRoutes(fastify: FastifyInstance) {
     }
   );
 
-  fastify.get(
-    "/empresa/:empresa_id/funcionarios",
+  //Funcionarios empresa
+  fastify.post(
+    "/funcionarios",
     { preHandler: [fastify.authenticate] },
     async (request, reply) => {
       try {
         const usuario = request.user as AuthenticatedUser;
         const empresaId = Number(
-          (request.params as { empresa_id: string }).empresa_id
+          (request.body as { empresaId: number }).empresaId
         );
         const funcionarios =
           await FuncionarioController.listarFuncionariosDaEmpresa(
